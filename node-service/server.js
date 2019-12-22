@@ -5,12 +5,11 @@ var app = express();
 var mongoose = require('mongoose');
 
 
-const url = 'mongodb://localhost/platformer2d';
+const url = 'mongodb+srv://yassine:yassine@cluster-z7gp3.gcp.mongodb.net/test?retryWrites=true&w=majority';
 
-mongoose.connect(url).then(
-  ()=>{console.log("connected")},
-  err =>{console.log("err",err);}
-);
+mongoose.connect(url, {
+  useMongoClient: true
+});
 
 app.use('/', route);
 

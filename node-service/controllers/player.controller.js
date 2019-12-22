@@ -18,17 +18,10 @@ function get(req, res) {
         if(err) res.send(err);
         res.json(players);
     });
-}
-// exports.post = function(req, res) {
-   
-//     var p = new player({ name: 'test', score: 100});
-//     p.save(function (err) {
-//         if(err) return HandleError(err);
-//         else res.send("joueur ajoute");
-//     });
-// };
+};
+
 
 module.exports = {
     get,
-    post,
+    post
 };
